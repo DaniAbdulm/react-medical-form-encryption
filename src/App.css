@@ -6,4 +6,51 @@
 
 html, body {
     height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+/*Navbar styling*/
+.navbar {
+    background-color: #079992;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+}
+.logo {
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.form-header {
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+.section-title {
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #8B8B8B;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 3rem;
+}
+.input-title {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #8B8B8B;
+}
+.input-field {
+    padding: 5% 5%;
+    border: 0px; 
+    background-color: #EBEBEB;
+    border-radius: 7px;
 }
