@@ -1,9 +1,15 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Form from './client/Form';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Form />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
