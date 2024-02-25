@@ -27,6 +27,7 @@ html, body {
     background-color: #F5F5F5;
     text-align: center;
     padding: 1rem 0rem;
+    margin-bottom: 3rem;
 }
 .section-title {
     font-weight: 300;
@@ -38,9 +39,9 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 55%;
     margin: auto;
-    margin-top: 3rem;
+    margin-bottom: 4rem;
 }
 .input-title {
     font-weight: 300;
@@ -49,8 +50,65 @@ html, body {
     color: #8B8B8B;
 }
 .input-field {
-    padding: 5% 5%;
+    padding: 15px 15px;
     border: 0px; 
     background-color: #EBEBEB;
     border-radius: 7px;
+    width: 28rem;
+    font-size: 1rem;
+}
+
+.input-element {
+    flex: 1;
+}
+
+.dob-input {
+    display: flex;
+}
+.dob-month {
+    padding: 15px 15px;
+    border: 0px; 
+    background-color: #EBEBEB;
+    border-radius: 7px;
+    width: 5rem;
+    font-size: 1rem;
+    margin-right: 2rem;
+}
+.dob-day {
+    padding: 15px 15px;
+    border: 0px; 
+    background-color: #EBEBEB;
+    border-radius: 7px;
+    width: 5rem;
+    font-size: 1rem;
+    margin-right: 2rem;
+}
+.dob-year {
+    padding: 15px 15px;
+    border: 0px; 
+    background-color: #EBEBEB;
+    border-radius: 7px;
+    width: 8rem;
+    font-size: 1rem;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.submit-btn {
+    padding: 15px 80px;
+    border: 0px; 
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    background-color: #3C6382;
+    color: white;
+    letter-spacing: 1.5px;
+    transition: 0.2s;
+}
+.submit-btn:hover {
+    transition: 0.2s;
+    background-color: #60a3bc;
+    cursor: pointer;
 }
