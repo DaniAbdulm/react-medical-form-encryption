@@ -18,6 +18,11 @@ html, body {
     align-items: center;
     padding: 1.5rem 4rem;
 }
+
+.nav-dots:hover {
+    cursor: pointer;
+}
+
 .logo {
     font-weight: bolder;
     font-size: 1.5rem;
