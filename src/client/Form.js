@@ -38,6 +38,9 @@ export default function Form() {
         e.preventDefault(); 
         //Perform encryption or other actions here
         const encryptedData = encryptData(patientData);
+
+        alert('Open console for results'); 
+
         console.log('Form Data to encrypt: ', patientData); 
         console.log('Encrypted Patient Data: ', encryptedData);
         //encryption happens here and other stuff
