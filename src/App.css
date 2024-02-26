@@ -123,9 +123,54 @@ html, body {
     color: white;
     letter-spacing: 1.5px;
     transition: 0.2s;
+    margin-bottom: 4rem;
 }
 .submit-btn:hover {
     transition: 0.2s;
     background-color: #60a3bc;
     cursor: pointer;
+}
+
+/*submission confirmation style*/
+.submit-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    opacity: 50%;
+}
+.submit-data-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #EBEBEB;
+    width: 55%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 30px;
+    border-radius: 10px;
+}
+.submit-data-header {
+    color: #8B8B8B;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.submit-column {
+    display: flex;
+    flex-direction: column;
+}
+.output-title {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #8B8B8B;
+    margin-bottom: 0.4rem;
+}
+.output-element {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+.data-output {
+    background-color: white;
+    padding: 12px; 
+    border-radius: 10px;
+    width: 65%;
 }

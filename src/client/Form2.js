@@ -32,6 +32,19 @@ export default function Form2() {
         });
     }
 
+    //handling submission
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+
+        //Perform encryption or other actions here
+        const encryptedData = encryptData(medicalData);
+
+        console.log('Form Data to encrypt: ', medicalData); 
+        console.log('Encrypted Patient Data: ', encryptedData);
+        
+        navigate('/submission');
+    }
+
     return (
         <div className="container">
             <NavBar headerTitle={'2. Medical Data'} />
@@ -62,6 +75,11 @@ export default function Form2() {
                     <textarea required className="input-txtarea" name="prevTreatments" value={medicalData.prevTreatments} onChange={handleChange} />
                 </div>
             </div>
+
+            <div className="submit-container">
+                <button className="submit-btn" onClick={handleSubmit}>Next</button>
+            </div>
+
         </div>
     ); 
 }
