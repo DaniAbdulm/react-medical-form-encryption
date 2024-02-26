@@ -20,7 +20,7 @@ export default function NavBar({headerTitle}) {
             </nav>
 
             <div className="form-header">
-                <h1 className="section-title">{headerTitle}n</h1>
+                <h1 className="section-title">{headerTitle}</h1>
             </div>
         </>
     )

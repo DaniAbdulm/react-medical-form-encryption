@@ -97,6 +97,18 @@ html, body {
     font-size: 1rem;
 }
 
+.input-txtarea {
+    padding: 15px 15px;
+    border: 0px; 
+    background-color: #EBEBEB;
+    border-radius: 7px;
+    width: 28rem;
+    font-size: 1rem; 
+    overflow-y: scroll;
+    height: 130px;
+    resize: none;
+}
+
 .submit-container {
     display: flex;
     justify-content: center;

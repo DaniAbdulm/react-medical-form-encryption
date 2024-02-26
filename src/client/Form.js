@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CryptoJS from "crypto-js";
 import NavBar from "./components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 export default function Form() {
     //initialize state object for form values
@@ -15,6 +16,8 @@ export default function Form() {
         phoneNumber: '', 
         homeAddress: ''
     }); 
+
+    const navigate = useNavigate(); 
 
     //secret key for encryption - must find a way to store this more secureley
     const secretKey = 'secret-key'; 
@@ -36,14 +39,14 @@ export default function Form() {
     //handling submission
     const handleSubmit = (e) => {
         e.preventDefault(); 
+
         //Perform encryption or other actions here
         const encryptedData = encryptData(patientData);
 
-        alert('Open console for results'); 
-
         console.log('Form Data to encrypt: ', patientData); 
         console.log('Encrypted Patient Data: ', encryptedData);
-        //encryption happens here and other stuff
+        
+        navigate('/form2');
     }
 
     return (
@@ -53,41 +56,41 @@ export default function Form() {
             <div className="form-row">
                 <div className="input-element">
                     <h2 className="input-title">First Name:</h2>
-                    <input className="input-field" name="firstName" value={patientData.firstName} onChange={handleChange}/>
+                    <input required className="input-field" name="firstName" value={patientData.firstName} onChange={handleChange}/>
                 </div>
                 <div className="input-element">
                     <h2 className="input-title">Last Name:</h2>
-                    <input className="input-field" name="lastName" value={patientData.lastName} onChange={handleChange}/>
+                    <input required className="input-field" name="lastName" value={patientData.lastName} onChange={handleChange}/>
                 </div>
             </div>
             <div className="form-row">
                 <div className="input-element">
                     <h2 className="input-title">Health Card #:</h2>
-                    <input className="input-field" name="healthCard" value={patientData.healthCard} onChange={handleChange} />
+                    <input required className="input-field" name="healthCard" value={patientData.healthCard} onChange={handleChange} />
                 </div>
                 <div className="input-element">
                     <h2 className="input-title">Date of Birth:</h2>
                     <div className="dob-input">
-                        <input className="dob-month" placeholder="MM" name="dobMonth" value={patientData.dobMonth} onChange={handleChange} />
-                        <input className="dob-day" placeholder="DD" name="dobDay" value={patientData.dobDay} onChange={handleChange} />
-                        <input className="dob-year" placeholder="YYYY" name="dobYear" value={patientData.dobYear} onChange={handleChange} />
+                        <input required className="dob-month" placeholder="MM" name="dobMonth" value={patientData.dobMonth} onChange={handleChange} />
+                        <input required className="dob-day" placeholder="DD" name="dobDay" value={patientData.dobDay} onChange={handleChange} />
+                        <input required className="dob-year" placeholder="YYYY" name="dobYear" value={patientData.dobYear} onChange={handleChange} />
                     </div>
                 </div>
             </div>
             <div className="form-row">
                 <div className="input-element">
                     <h2 className="input-title">Email Address:</h2>
-                    <input className="input-field" name="emailAddress" value={patientData.emailAddress} onChange={handleChange} />
+                    <input required className="input-field" name="emailAddress" value={patientData.emailAddress} onChange={handleChange} />
                 </div>
                 <div className="input-element">
                     <h2 className="input-title">Phone #:</h2>
-                    <input className="input-field" name="phoneNumber" value={patientData.phoneNumber} onChange={handleChange} />
+                    <input required className="input-field" name="phoneNumber" value={patientData.phoneNumber} onChange={handleChange} />
                 </div>
             </div>
             <div className="form-row">
                 <div className="input-element">
                     <h2 className="input-title">Home Address:</h2>
-                    <input className="input-field" name="homeAddress" value={patientData.homeAddress} onChange={handleChange} />
+                    <input required className="input-field" name="homeAddress" value={patientData.homeAddress} onChange={handleChange} />
                 </div>
             </div>
 
