@@ -14,7 +14,7 @@ function App() {
           <Route path='/submission' element={<Submission />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </div>   
   );
 }
 

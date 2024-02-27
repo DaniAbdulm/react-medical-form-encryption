@@ -131,6 +131,23 @@ html, body {
     cursor: pointer;
 }
 
+.back-btn {
+    padding: 15px 30px;
+    border: 0; 
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-right: 1.5rem;
+    background-color: #e55039;
+    color: white;
+    transition: 0.2s;
+}
+.back-btn:hover {
+    transition: 0.2s;
+    background-color: #d87162;
+    cursor: pointer;
+}
+
 /*submission confirmation style*/
 .submit-title {
     display: flex;
@@ -144,7 +161,7 @@ html, body {
     background-color: #EBEBEB;
     width: 55%;
     margin: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     padding: 30px;
     border-radius: 10px;
 }

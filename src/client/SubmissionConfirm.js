@@ -1,6 +1,8 @@
 import NavBar from "./components/Navbar";
+import BackBtn from "./components/BackBtn";
 
 export default function Submission() {
+
     return (
         <div className="container">
             <NavBar headerTitle={'3. Submission Confirmation'} />
@@ -11,15 +13,15 @@ export default function Submission() {
                 <div className="submit-column">
                     <div className="output-element">
                         <h2 className="output-title">First Name:</h2>
-                        <p className="data-output">Test output</p>
+                        <p className="data-output">Test Output</p>
                     </div>
                     <div className="output-element">
                         <h2 className="output-title">Last Name:</h2>
-                        <p className="data-output">Test output</p>
+                        <p className="data-output">Test Output</p>
                     </div>
                     <div className="output-element">
                         <h2 className="output-title">Healthcard #:</h2>
-                        <p className="data-output">Test output</p>
+                        <p className="data-output">Test Output</p>
                     </div>
                     <div className="output-element">
                         <h2 className="output-title">Date of Birth:</h2>
@@ -69,6 +71,7 @@ export default function Submission() {
             
 
             <div className="submit-container">
+                <BackBtn />
                 <button className="submit-btn">Submit</button>
             </div>
         </div>

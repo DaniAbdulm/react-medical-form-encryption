@@ -2,6 +2,7 @@ import { useState } from "react";
 import CryptoJS from "crypto-js";
 import NavBar from "./components/Navbar";
 import { useNavigate } from "react-router-dom";
+import BackBtn from "./components/BackBtn";
 
 export default function Form2() {
     //initializing state object for form values 
@@ -77,6 +78,7 @@ export default function Form2() {
             </div>
 
             <div className="submit-container">
+                <BackBtn />
                 <button className="submit-btn" onClick={handleSubmit}>Next</button>
             </div>
 
