@@ -43,7 +43,8 @@ export default function Form2() {
         console.log('Form Data to encrypt: ', medicalData); 
         console.log('Encrypted Patient Data: ', encryptedData);
         
-        navigate('/submission');
+        //this will be voided temporarily until new navigate configured.
+        //navigate('/submission');
     }
 
     return (
