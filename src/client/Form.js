@@ -46,6 +46,8 @@ export default function Form() {
 
         console.log('Form Data to encrypt: ', patientData); 
         console.log('Encrypted Patient Data: ', encryptedData);
+        localStorage.setItem('patientData', JSON.stringify(patientData));
+        localStorage.setItem('encryptedData', encryptData); 
         
         navigate('/form2');
     }

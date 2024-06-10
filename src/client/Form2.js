@@ -3,8 +3,10 @@ import CryptoJS from "crypto-js";
 import NavBar from "./components/Navbar";
 import { useNavigate } from "react-router-dom";
 import BackBtn from "./components/BackBtn";
+import { useLocation  } from "react-router-dom";
 
-export default function Form2() {
+export default function Form2() { 
+
     //initializing state object for form values 
     const [medicalData, setMedicalData] = useState({
         medHistory: '',
@@ -38,13 +40,14 @@ export default function Form2() {
         e.preventDefault(); 
 
         //Perform encryption or other actions here
-        const encryptedData = encryptData(medicalData);
+        const encryptedMedData = encryptData(medicalData);
 
         console.log('Form Data to encrypt: ', medicalData); 
-        console.log('Encrypted Patient Data: ', encryptedData);
-        
-        //this will be voided temporarily until new navigate configured.
-        //navigate('/submission');
+        console.log('Encrypted Patient Data: ', encryptedMedData);
+        localStorage.setItem('medicalData', JSON.stringify(medicalData));
+        localStorage.setItem('encryptedMedData', encryptedMedData);
+    
+        navigate('/Submission');
     }
 
     return (
