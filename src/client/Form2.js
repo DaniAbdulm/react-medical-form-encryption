@@ -42,8 +42,8 @@ export default function Form2() {
         //Perform encryption or other actions here
         const encryptedMedData = encryptData(medicalData);
 
-        console.log('Form Data to encrypt: ', medicalData); 
-        console.log('Encrypted Patient Data: ', encryptedMedData);
+        console.log('Patient medical data to encrypt: ', medicalData); 
+        console.log('Encrypted Patient Medical Data: ', encryptedMedData);
         localStorage.setItem('medicalData', JSON.stringify(medicalData));
         localStorage.setItem('encryptedMedData', encryptedMedData);
     

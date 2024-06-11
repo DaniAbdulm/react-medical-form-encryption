@@ -123,7 +123,7 @@ export default function Submission() {
 
             <div className="submit-container">
                 <BackBtn />
-                <button className="submit-btn" onClick={handleSubmit}>Next</button>
+                <button className="submit-btn" onClick={handleSubmit}>Submit</button>
             </div>
         </div>
     );
