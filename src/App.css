@@ -191,3 +191,28 @@ html, body {
     border-radius: 10px;
     width: 65%;
 }
+
+
+.submitted-container {
+    text-align: center;
+}
+.submitted-title {
+    margin-top: 12vh;
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    color: rgb(17, 17, 17);
+}
+
+.home-btn {
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 0px;
+    color: white;
+    background: #2980b9;
+    transition: 0.2s;
+}
+.home-btn:hover {
+    cursor: pointer;
+    background: #36a5f0;
+}

@@ -4,6 +4,7 @@ import Form from './client/Form';
 import Form2 from './client/Form2';
 import Submission from './client/SubmissionConfirm';
 import Submitted from './client/Submitted';
+import Dashboard from './client/Dashboard';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/form2' element={<Form2 />} />
           <Route path='/submission' element={<Submission />} />
           <Route path='/submitted' element={<Submitted />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </div>   
