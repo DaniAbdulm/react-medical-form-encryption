@@ -1,6 +1,9 @@
 import NavBar from "./components/Navbar";
 import BackBtn from "./components/BackBtn";
 import { useEffect, useState } from "react";
+import { addPatientData } from "../firebase/config"; //importing the firebase function
+import { parseActionCodeURL } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const patientFormData = require("./Form"); 
 const medicalFormData = require("./Form2"); 
@@ -13,6 +16,8 @@ export default function Submission() {
     //from form 2
     const [medicalData, setMedicalData] = useState(null);
     const [encryptedMedData, setEncryptedMedData] = useState(null);
+
+    const navigate = useNavigate(); 
 
     //for patient data 
     useEffect(() => {
@@ -43,15 +48,27 @@ export default function Submission() {
 
         if (storedEncryptedMedData) {
             setEncryptedMedData(storedEncryptedMedData); 
-            console.log('Encrypted Patient Medical Data:', storedEncryptedMedData); 
+            console.log('Encrypted Patient Medical Data:', storedEncryptedMedData);
         }
     }, []); 
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); 
 
+        const patientName = patientData.firstName;
 
+        if (typeof patientName === 'string') {
+            await addPatientData({ patientName, encryptedData, encryptedMedData }); //Make sure to send as an object
+        } else {
+            console.error('Encrypted data is not a string');
+        }
+
+        localStorage.setItem('patientData', JSON.stringify(patientData));
+        localStorage.setItem('encryptedData', encryptedData);
+
+        //navigate to the submitted page
+        navigate('/Submission');
     }
 
     return (

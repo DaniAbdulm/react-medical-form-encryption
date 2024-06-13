@@ -4,7 +4,6 @@ import NavBar from "./components/Navbar";
 import { useNavigate } from "react-router-dom";
 import BackBtn from "./components/BackBtn";
 import { addPatientData } from "../firebase/config"; //importing the firebase function
-import { type } from "@testing-library/user-event/dist/type";
 
 export default function Form() {
     //initialize state object for form values
@@ -48,16 +47,9 @@ export default function Form() {
 
         console.log('Patient info to encrypt: ', patientData); 
         console.log('Encrypted Patient Info: ', encryptedData); 
-        console.log('Type of Encrypted Data: ', typeof encryptData); //should be a string
-
-        if (typeof encryptData === 'string') {
-            await addPatientData({ encryptData }); //Make sure to send as an object
-        } else {
-            console.error('Encrypted data is not a string');
-        }
 
         localStorage.setItem('patientData', JSON.stringify(patientData));
-        localStorage.setItem('encryptedData', encryptData); 
+        localStorage.setItem('encryptedData', encryptedData); 
         
         navigate('/form2');
     }

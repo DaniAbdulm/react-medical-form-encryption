@@ -3,6 +3,7 @@ import './App.css';
 import Form from './client/Form';
 import Form2 from './client/Form2';
 import Submission from './client/SubmissionConfirm';
+import Submitted from './client/Submitted';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Form />} />
           <Route path='/form2' element={<Form2 />} />
           <Route path='/submission' element={<Submission />} />
+          <Route path='/submitted' element={<Submitted />} />
         </Routes>
       </BrowserRouter>
     </div>   

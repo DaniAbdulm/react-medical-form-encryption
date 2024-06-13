@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CryptoJS from "crypto-js";
 import NavBar from "./components/Navbar";
-import { useNavigate } from "react-router-dom";
+import { useAsyncError, useNavigate } from "react-router-dom";
 import BackBtn from "./components/BackBtn";
 import { useLocation  } from "react-router-dom";
 
@@ -36,7 +36,7 @@ export default function Form2() {
     }
 
     //handling submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); 
 
         //Perform encryption or other actions here
@@ -44,6 +44,7 @@ export default function Form2() {
 
         console.log('Patient medical data to encrypt: ', medicalData); 
         console.log('Encrypted Patient Medical Data: ', encryptedMedData);
+
         localStorage.setItem('medicalData', JSON.stringify(medicalData));
         localStorage.setItem('encryptedMedData', encryptedMedData);
     
