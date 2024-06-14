@@ -68,7 +68,7 @@ export default function Submission() {
         localStorage.setItem('encryptedData', encryptedData);
 
         //navigate to the submitted page
-        navigate('/Submission');
+        navigate('/Submitted');
     }
 
     return (

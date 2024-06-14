@@ -198,12 +198,13 @@ html, body {
 }
 .submitted-title {
     margin-top: 12vh;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-size: 5rem;
     color: rgb(17, 17, 17);
 }
 
 .home-btn {
+    margin-top: 1rem;
     font-size: 1.5rem;
     padding: 2rem;
     border-radius: 15px;
