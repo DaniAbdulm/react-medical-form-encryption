@@ -1,7 +1,10 @@
+import NavBar from "./components/Navbar"
 
 export default function Dashboard() {
 
     return (
-        <h1>Dashboard</h1>
+        <div className="container">
+            <NavBar headerTitle={'Dashboard'} />
+        </div>
     )
 }
