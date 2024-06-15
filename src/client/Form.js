@@ -19,6 +19,7 @@ export default function Form() {
         homeAddress: ''
     });  
 
+    const [errors, setErrors] = useState();
     const navigate = useNavigate(); 
 
     //secret key for encryption - must find a way to store this more secureley
@@ -38,9 +39,45 @@ export default function Form() {
         });
     }
 
+    //input validation logic
+    const validate = () => {
+        const newErrors = {}; 
+
+        if (!patientData.firstName) {
+            newErrors.firstName = "First name is required"; 
+        }
+        if (!patientData.lastName) {
+            newErrors.lastName = "Last name is required"; 
+        }
+        if (!patientData.healthCard) {
+            newErrors.healthCard = "Health card # is required"; 
+        } else if (!/^\d{4}-\d{3}-\d{3}$/.test(patientData.healthCard)) {
+            newErrors.healthCard = "Health card # must be in the format XXXX-XXX-XXX-XX"; 
+        }
+        if (!patientData.dobMonth || !patientData.dobDay || !patientData.dobYear) {
+            newErrors.dob = "Date of birth is required"; 
+        } else if (!/^\d{2}$/.test(patientData.dobMonth) || !/^\d{2}$/.test(patientData.dobDay) || !/^\d{4}$/.test(patientData.dobYear)) {
+            newErrors.dob = "Date of birth must be in the format MM/DD/YYYY";
+        }
+        if (!patientData.phoneNumber) {
+            newErrors.phoneNumber = "Phone # is required";
+        } else if (!/^\d{10}$/.test(patientData.phoneNumber)) {
+            newErrors.phoneNumber = "Phone # must be 10 digits";
+        }
+        if (!patientData.homeAddress) {
+            newErrors.homeAddress = "Full street address is required";
+        }
+        setErrors(newErrors); 
+        return Object.keys(newErrors).length === 0;
+    }
+
     //handling submission
     const handleSubmit = async (e) => {
         e.preventDefault(); 
+
+        if (!validate()) {
+            return;
+        }
 
         //Perform encryption or other actions here
         const encryptedData = encryptData(patientData);
@@ -60,21 +97,21 @@ export default function Form() {
 
             <div className="form-row">
                 <div className="input-element">
-                    <h2 className="input-title">First Name:</h2>
+                    <h2 className="input-title">* First Name:</h2>
                     <input required className="input-field" name="firstName" value={patientData.firstName} onChange={handleChange}/>
                 </div>
                 <div className="input-element">
-                    <h2 className="input-title">Last Name:</h2>
+                    <h2 className="input-title">* Last Name:</h2>
                     <input required className="input-field" name="lastName" value={patientData.lastName} onChange={handleChange}/>
                 </div>
             </div>
             <div className="form-row">
                 <div className="input-element">
-                    <h2 className="input-title">Health Card #:</h2>
+                    <h2 className="input-title">* Health Card #:</h2>
                     <input required className="input-field" name="healthCard" value={patientData.healthCard} onChange={handleChange} />
                 </div>
                 <div className="input-element">
-                    <h2 className="input-title">Date of Birth:</h2>
+                    <h2 className="input-title">* Date of Birth:</h2>
                     <div className="dob-input">
                         <input required className="dob-month" placeholder="MM" name="dobMonth" value={patientData.dobMonth} onChange={handleChange} />
                         <input required className="dob-day" placeholder="DD" name="dobDay" value={patientData.dobDay} onChange={handleChange} />
@@ -88,14 +125,14 @@ export default function Form() {
                     <input required className="input-field" name="emailAddress" value={patientData.emailAddress} onChange={handleChange} />
                 </div>
                 <div className="input-element">
-                    <h2 className="input-title">Phone #:</h2>
+                    <h2 className="input-title">* Phone #:</h2>
                     <input required className="input-field" name="phoneNumber" value={patientData.phoneNumber} onChange={handleChange} />
                 </div>
             </div>
             <div className="form-row">
                 <div className="input-element">
-                    <h2 className="input-title">Home Address:</h2>
-                    <input required className="input-field" name="homeAddress" value={patientData.homeAddress} onChange={handleChange} />
+                    <h2 className="input-title">* Full Street Address:</h2>
+                    <input required className="input-field" name="homeAddress" placeholder="Street Name, City, Province, Postal Code" value={patientData.homeAddress} onChange={handleChange} />
                 </div>
             </div>
 
