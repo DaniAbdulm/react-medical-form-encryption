@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Dashboard from "../Dashboard";
+import { auth } from "../../firebase/config";
 
 export default function NavBar({headerTitle}) {
 
@@ -20,6 +21,16 @@ export default function NavBar({headerTitle}) {
         navigate('/form1')
     }
 
+    //handles logging out functionality
+    const handleLogout = () => {
+        auth.signOut().then(() => {
+            console.log('User signed out');
+            navigate('/signin'); //redirect to sign-in page
+        }).catch((error) => {
+            console.error('Error signing out: ', error);
+        });
+    };
+
     return (
         <>
             <nav className="navbar">
@@ -27,7 +38,7 @@ export default function NavBar({headerTitle}) {
                 <div className="nav-links">
                     <a className="nav-link" onClick={handleAddPatient}>Add Patient</a>
                     <a className="nav-link" onClick={handleDashboard}>Dashboard</a>
-                    <a className="nav-link">Logout</a>
+                    <a className="nav-link" onClick={handleLogout}>Logout</a>
                 </div>
             </nav>
 
