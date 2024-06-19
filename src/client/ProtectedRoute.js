@@ -4,7 +4,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase/config";
 
 const ProtectedRoute = ({ children }) => {
-    const [user] = useAuthState(auth);
+    const [user, loading, error] = useAuthState(auth);
+
+    if (loading) {
+        return <div>Loading...</div>; //try implementing a spinner or loading animation
+    }
 
     if (!user) {
         return <Navigate to="/signin" />;

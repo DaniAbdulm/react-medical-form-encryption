@@ -14,10 +14,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/signin' element={<SignIn />} />
-          <Route path='/form1' element={<Form />} />
-          <Route path='/form2' element={<Form2 />} />
-          <Route path='/submission' element={<Submission />} />
-          <Route path='/submitted' element={<Submitted />} />
+          <Route path='/form1' element={<ProtectedRoute><Form /></ProtectedRoute>} />
+          <Route path='/form2' element={<ProtectedRoute><Form2 /></ProtectedRoute>} />
+          <Route path='/submission' element={<ProtectedRoute><Submission /></ProtectedRoute>} />
+          <Route path='/submitted' element={<ProtectedRoute><Submitted /></ProtectedRoute>} />
           <Route 
             path='/dashboard' 
             element={
@@ -26,7 +26,7 @@ function App() {
               </ProtectedRoute> 
             } 
           />
-          <Route index path="/" element={<Dashboard />} />  
+          <Route index path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />  
           </Routes>
       </BrowserRouter>
     </div>   
