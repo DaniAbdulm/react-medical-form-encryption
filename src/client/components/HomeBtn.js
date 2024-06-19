@@ -5,7 +5,7 @@ export default function HomeBtn() {
 
     return (
         <div className="home-btn-container">
-            <button className="home-btn" onClick={() => navigate('/Dashboard')}>
+            <button className="home-btn" onClick={() => navigate('/')}>
                 Back to Dashboard
             </button>
         </div>

@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA5C4ts-FPbZO_PgbdyJkVYCasRi-JMwwQ",
@@ -11,9 +12,10 @@ const firebaseConfig = {
     measurementId: "G-LH9N2Q41T0"
   };
   
-  // Initialize Firebase
+  // Initialize Firebase and services
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+  export const auth = getAuth(app);
 
   export const addPatientData = async (data) => {
     try {

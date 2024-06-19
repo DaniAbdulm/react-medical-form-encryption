@@ -39,45 +39,9 @@ export default function Form() {
         });
     }
 
-    //input validation logic
-    const validate = () => {
-        const newErrors = {}; 
-
-        if (!patientData.firstName) {
-            newErrors.firstName = "First name is required"; 
-        }
-        if (!patientData.lastName) {
-            newErrors.lastName = "Last name is required"; 
-        }
-        if (!patientData.healthCard) {
-            newErrors.healthCard = "Health card # is required"; 
-        } else if (!/^\d{4}-\d{3}-\d{3}$/.test(patientData.healthCard)) {
-            newErrors.healthCard = "Health card # must be in the format XXXX-XXX-XXX-XX"; 
-        }
-        if (!patientData.dobMonth || !patientData.dobDay || !patientData.dobYear) {
-            newErrors.dob = "Date of birth is required"; 
-        } else if (!/^\d{2}$/.test(patientData.dobMonth) || !/^\d{2}$/.test(patientData.dobDay) || !/^\d{4}$/.test(patientData.dobYear)) {
-            newErrors.dob = "Date of birth must be in the format MM/DD/YYYY";
-        }
-        if (!patientData.phoneNumber) {
-            newErrors.phoneNumber = "Phone # is required";
-        } else if (!/^\d{10}$/.test(patientData.phoneNumber)) {
-            newErrors.phoneNumber = "Phone # must be 10 digits";
-        }
-        if (!patientData.homeAddress) {
-            newErrors.homeAddress = "Full street address is required";
-        }
-        setErrors(newErrors); 
-        return Object.keys(newErrors).length === 0;
-    }
-
     //handling submission
     const handleSubmit = async (e) => {
         e.preventDefault(); 
-
-        if (!validate()) {
-            return;
-        }
 
         //Perform encryption or other actions here
         const encryptedData = encryptData(patientData);

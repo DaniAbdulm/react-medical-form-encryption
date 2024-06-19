@@ -26,8 +26,8 @@ const Dashboard = () => {
         <div className="container">
             <NavBar headerTitle={'Dashboard'} />
             <div className="header-container">
-                <input className="db-search-bar" placeholder="Search..." />
                 <h1 className="header-title">Submitted Patients</h1>
+                <input className="db-search-bar" placeholder="Search..." />
             </div>
             <div className="patient-list">
             {patients.map((patient, index) => (
