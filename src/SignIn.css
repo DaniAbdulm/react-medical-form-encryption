@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.signin-full-container {
+    text-align: center;
+}
+
+.title {
+    color: lightgrey;
+    margin-top: 3rem;
+    font-size: 4rem;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.signin-container {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-top: 4rem;
+    background-color: white;
+    padding: 5rem;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px rgb(63, 63, 63);
+}
+
+.signin-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.signin-input {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 100px;
+    width: 70%;
+}
+
+.signin-submit {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.signin-submit:hover {
+    background-color: #59b3f0;
+    cursor: pointer;
+}

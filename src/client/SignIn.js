@@ -3,6 +3,7 @@ import React from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
 import { Navigate, useNavigate } from "react-router-dom";
+import '../SignIn.css';
 
 const SignIn = () => {
     const [email, setEmail] = useState(""); 
@@ -21,22 +22,31 @@ const SignIn = () => {
     }; 
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h1>Sign In</h1>
-            <input 
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <input 
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit">Sign In</button>
-        </form>
+        <div className="signin-full-container">
+            <h1 className="title">CipherMD</h1>
+            <div className="signin-container">
+                <form className="signin-form" onSubmit={handleSubmit}>
+                    <h1 className="signin-title">Sign In</h1>
+                    <input 
+                        className="signin-input"
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <br />
+                    <input 
+                        className="signin-input"
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <br />
+                    <button type="submit" className="signin-submit">Sign In</button>
+                </form>
+            </div>
+        </div> 
     );
 };
 
