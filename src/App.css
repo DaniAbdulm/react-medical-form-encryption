@@ -292,3 +292,50 @@ html, body {
 .patient-table td {
     white-space: nowrap;
 }
+
+.patient-table-buttons {
+    display: flex;
+    justify-content: right;
+}
+.pt-edit-btn {
+    margin-right: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border: 0; 
+    border-radius: 100px;
+    background-color: #2980b9;
+    transition: 0.2s;
+}
+.pt-edit-btn:hover{
+    cursor: pointer;
+    background-color: #59b5f3;
+}
+.pt-delete-btn {
+    margin-right: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border: 0; 
+    border-radius: 100px;
+    background-color: #e74c3c;
+    transition: 0.2s;
+}
+.pt-delete-btn:hover{
+    cursor: pointer;
+    background-color: #e56759;
+}
+.pt-sort-btn {
+    margin-right: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border: 0; 
+    border-radius: 100px;
+    background-color: #f39c12;
+    transition: 0.2s;
+}
+.pt-sort-btn:hover{
+    cursor: pointer;
+    background-color: #fdb745;
+}

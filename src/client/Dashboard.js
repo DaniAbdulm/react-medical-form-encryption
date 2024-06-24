@@ -33,12 +33,28 @@ const Dashboard = () => {
         });
     };
 
+    const [editingPatient, setEditingPatient] = useState(null);
+
+    const handleEditButtonClick = () => {
+        if (selectedPatients.length === 1) {
+            const pathToEdit = patients.find(patient => patient.i === selectedPatients[0]);
+            console.log('Editing patient:', pathToEdit);
+        } else {
+            alert("Please select exactly one patient to edit.");
+        }
+    };
+
     return (
         <div className="container">
             <NavBar headerTitle={'Dashboard'} />
             <div className="header-container">
                 <h1 className="header-title">Patients</h1>
                 <input className="db-search-bar" placeholder="Search..." />
+            </div>
+            <div className="patient-table-buttons">
+                <button className="pt-edit-btn" onClick={handleEditButtonClick}>Edit</button>
+                <button className="pt-delete-btn">Delete</button>
+                <button className="pt-sort-btn">Sort</button>
             </div>
             <div className="patient-table-container">
                 <table className="patient-table">
