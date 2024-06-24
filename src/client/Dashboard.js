@@ -29,17 +29,35 @@ const Dashboard = () => {
                 <h1 className="header-title">Submitted Patients</h1>
                 <input className="db-search-bar" placeholder="Search..." />
             </div>
-            <div className="patient-list">
-            {patients.map((patient, index) => (
-                    <div key={index} className="patient-card">
-                        <h3 className="patient-title">{index + 1} - {patient.firstName} {patient.lastName}</h3>
-                        <p className="patient-data"><strong>Health Card #:</strong> {patient.healthCard}</p>
-                        <p className="patient-data"><strong>Date of Birth:</strong> {patient.dobMonth}/{patient.dobDay}/{patient.dobYear}</p>
-                        <p className="patient-data"><strong>Email Address:</strong> {patient.emailAddress}</p>
-                        <p className="patient-data"><strong>Phone Number:</strong> {patient.phoneNumber}</p>
-                        <p className="patient-data"><strong>Home Address:</strong> {patient.homeAddress}</p>
-                    </div>
-                ))}
+            <div className="patient-table-container">
+                <table className="patient-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Health Card #</th>
+                            <th>Date of Birth</th>
+                            <th>Email Address</th>
+                            <th>Phone Number</th>
+                            <th>Home Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {patients.map((patient, index) => (
+                            <tr key={index}>
+                                <td>{index + 1}</td>
+                                <td>{patient.firstName}</td>
+                                <td>{patient.lastName}</td>
+                                <td>{patient.healthCard}</td>
+                                <td>{patient.dobMonth}/{patient.dobDay}/{patient.dobYear}</td>
+                                <td>{patient.emailAddress}</td>
+                                <td>{patient.phoneNumber}</td>
+                                <td>{patient.homeAddress}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </div>
     )

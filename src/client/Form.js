@@ -52,7 +52,7 @@ export default function Form() {
         localStorage.setItem('patientData', JSON.stringify(patientData));
         localStorage.setItem('encryptedData', encryptedData); 
         
-        navigate('/form2');
+        navigate('/Submission');
     }
 
     return (

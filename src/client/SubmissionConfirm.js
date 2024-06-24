@@ -109,33 +109,6 @@ export default function Submission() {
                     </div>
                 </div>
             </div>
-
-            <div className="submit-data-container">
-                <p className="submit-data-header">Medical Data</p>
-                <div className="submit-column">
-                    <div className="output-element">
-                        <h2 className="output-title">Medical History:</h2>
-                        <p className="data-output">{medicalData?.medHistory}</p>
-                    </div>
-                    <div className="output-element">
-                        <h2 className="output-title">Current Medication:</h2>
-                        <p className="data-output">{medicalData?.currentMedication}</p>
-                    </div>
-                    <div className="output-element">
-                        <h2 className="output-title">Allergies:</h2>
-                        <p className="data-output">{medicalData?.allergies}</p>
-                    </div>
-                    <div className="output-element">
-                        <h2 className="output-title">Symptoms:</h2>
-                        <p className="data-output">{medicalData?.symptoms}</p>
-                    </div>
-                    <div className="output-element">
-                        <h2 className="output-title">Previous Treatments:</h2>
-                        <p className="data-output">{medicalData?.prevTreatments}</p>
-                    </div>
-                </div>
-            </div>
-
             
 
             <div className="submit-container">
