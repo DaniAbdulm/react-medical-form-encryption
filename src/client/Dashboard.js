@@ -7,6 +7,7 @@ const secretKey = 'secret-key';
 
 const Dashboard = () => {
     const [patients, setPatients] = useState([]);
+    const [selectedPatients, setSelectedPatients] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,18 +23,28 @@ const Dashboard = () => {
         fetchData();
     }, []);
 
+    const handleCheckboxChange = (index) => {
+        setSelectedPatients((prevSelectedPatients) => {
+            if (prevSelectedPatients.includes(index)) {
+                return prevSelectedPatients.filter((i) => i !== index);
+            } else {
+                return [...prevSelectedPatients, index];
+            }
+        });
+    };
+
     return (
         <div className="container">
             <NavBar headerTitle={'Dashboard'} />
             <div className="header-container">
-                <h1 className="header-title">Submitted Patients</h1>
+                <h1 className="header-title">Patients</h1>
                 <input className="db-search-bar" placeholder="Search..." />
             </div>
             <div className="patient-table-container">
                 <table className="patient-table">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>Select</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Health Card #</th>
@@ -46,7 +57,13 @@ const Dashboard = () => {
                     <tbody>
                         {patients.map((patient, index) => (
                             <tr key={index}>
-                                <td>{index + 1}</td>
+                                <td>
+                                    <input 
+                                        type="checkbox"
+                                        checked={selectedPatients.includes(index)}
+                                        onChange={() => handleCheckboxChange(index)}
+                                    />
+                                </td>
                                 <td>{patient.firstName}</td>
                                 <td>{patient.lastName}</td>
                                 <td>{patient.healthCard}</td>
