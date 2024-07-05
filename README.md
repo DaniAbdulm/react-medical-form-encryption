@@ -30,3 +30,10 @@ CipherMD is a secure web application designed to manage patient data efficiently
 
 - **Encryption**
   - CryptoJS
+
+## Installation
+1. **Clone the repository:**
+'''
+git clone https://github.com/yourusername/CipherMD.git
+cd CipherMD
+'''
