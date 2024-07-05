@@ -60,3 +60,38 @@ REACT_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
 ```
 npm start
 ```
+
+## Usage
+1. **Sign In:**
+  - Only authorized users can log in to access the app.
+
+2. **Add Patient:**
+  - Fill in the patient information and submit to add new patient.
+
+3. **Dashboard:**
+   - View all submitted patients, search, sort, and select records for editing or deletion.
+
+4. **Edit Patient:**
+   - Select a patient record using the checkboxes and click the "Edit" button to update patient details.
+
+5. ** Delete Patient:**
+   - Select one or more patient records using the checkboxes and click the "Delete" button to remove records.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
