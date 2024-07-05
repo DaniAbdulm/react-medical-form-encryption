@@ -51,7 +51,8 @@ const Dashboard = () => {
             patient.lastName.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase()) ||
             patient.emailAddress.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase()) ||
             patient.phoneNumber.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase()) ||
-            patient.healthCard.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase())
+            patient.healthCard.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase()) ||
+            patient.homeAddress.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase())
         ); 
     });
  
