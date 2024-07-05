@@ -20,13 +20,13 @@ CipherMD is a secure web application designed to manage patient data efficiently
 
 ## Technologies Used
 - **Frontend**
--   React
--   React Router
--   CSS Modules
+  - React
+  - React Router
+  - CSS Modules
 
 - **Backend**
--   Firebase Firestore
--   Firebase Authentication
+  - Firebase Firestore
+  - Firebase Authentication
 
 - **Encryption**
--   CryptoJS
+  - CryptoJS
