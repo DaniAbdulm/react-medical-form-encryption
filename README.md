@@ -17,3 +17,16 @@ CipherMD is a secure web application designed to manage patient data efficiently
 - **CRUD Operations:** Full create, read, update, and delete functionality for managing patient records.
 - **Dashboard:** A user-friendly dashboard that displays patient information in a tabular format, with options to edit, delete, and sort records.
 - **Responsive Design:** The application is fully responsive, providing a seamless experience across devices.
+
+## Technologies Used
+- **Frontend**
+-   React
+-   React Router
+-   CSS Modules
+
+- **Backend**
+-   Firebase Firestore
+-   Firebase Authentication
+
+- **Encryption**
+-   CryptoJS
