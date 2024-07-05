@@ -63,10 +63,10 @@ npm start
 
 ## Usage
 1. **Sign In:**
-  - Only authorized users can log in to access the app.
+    - Only authorized users can log in to access the app.
 
 2. **Add Patient:**
-  - Fill in the patient information and submit to add new patient.
+    - Fill in the patient information and submit to add new patient.
 
 3. **Dashboard:**
    - View all submitted patients, search, sort, and select records for editing or deletion.
