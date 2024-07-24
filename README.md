@@ -66,6 +66,8 @@ npm start
 1. **Sign In:**
     - Only authorized users can log in to access the app.
 
+![image](https://github.com/user-attachments/assets/7831ceaf-e1a6-454d-bbaa-97c9079c0567)
+
 2. **Add Patient:**
     - Fill in the patient information and submit to add new patient.
       
