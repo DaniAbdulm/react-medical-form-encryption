@@ -1,6 +1,7 @@
 # CipherMD - Encrypted Patient Data Management
 
-CipherMD is a secure web application designed to manage patient data efficiently. It ensures that sensitive patient information is protected through encryption and offers a user-friendly interface for healthcare professionals.
+CipherMD is a secure web application built with React and Firebase, designed to manage patient data efficiently and securely. The app ensures that sensitive patient information is encrypted both at rest and in transit, providing a comprehensive and user-friendly dashboard for healthcare professionals. Key features include user authentication, data encryption, CRUD operations, and a searchable patient list.
+
 
 ## Table of Contents
 - Features
