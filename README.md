@@ -68,7 +68,9 @@ npm start
 
 2. **Add Patient:**
     - Fill in the patient information and submit to add new patient.
+      
     ![image](https://github.com/user-attachments/assets/b47a59d3-bc4e-4555-8dfb-d7fee1aa5394)
+    ![image](https://github.com/user-attachments/assets/876d38df-a9eb-4014-8207-0c1fdf0a37be)
 
 
 3. **Dashboard:**
