@@ -78,6 +78,8 @@ npm start
 4. **Dashboard:**
    - View all submitted patients, search, sort, and select records for editing or deletion.
 
+  ![image](https://github.com/user-attachments/assets/7a197029-f381-4d02-983c-6196748c8dbd)
+
 5. **Edit Patient:**
    - Select a patient record using the checkboxes and click the "Edit" button to update patient details.
 
